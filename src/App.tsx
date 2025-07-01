@@ -39,13 +39,14 @@ const App = () => {
 
   useEffect(() => {
     getWeather();
-  },)
+  }, [])
 
   return (
+
     <div className="wrapper">
       <div className="container">
         <Title />
-        <Form setCity={setCity} getWeather={getWeather} />
+        <Form city={city} setCity={setCity} getWeather={getWeather} />
         <Results {...results} />
       </div>
     </div>
